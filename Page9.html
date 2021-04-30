@@ -1,0 +1,533 @@
+<!DOCTYPE html><html><head>
+  <meta charset="UTF-8">
+  <title>A-Frame</title>
+  <<!-- main a-frame library -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <!-- physics library -->
+  <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+  <!-- extras library -->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+  <!-- for the nav mesh -->
+  <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+  <!-- A-Frame HREF component library -->
+  <script src="a-frame-href.js"></script>
+
+  <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    </head>
+    <body>
+    <a-scene physics="" cursor="rayOrigin: mouse">
+
+<!-- Camera -->
+      <a-entity id="rig" position="0 1.5 27" movement-controls="">
+      <a-entity id="camera" camera="" look-controls=""></a-entity>
+      <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
+    </a-entity>
+
+<!-- Assets -->
+      <a-assets img="" src="18-24YearsOld.png" id="Interest1"> </a-assets>
+      <a-assets img="" src="AnPGames.png" id="Interest2"> </a-assets>
+      <a-assets img="" src="Adventure Games.png" id="Interest3"> </a-assets>
+      <a-assets img="" src="Apparel.png" id="Interest4"> </a-assets>
+      <a-assets img="" src="Bachelor's Degree.png" id="Interest5"> </a-assets>
+      <a-assets img="" src="Banking.png" id="Interest6"> </a-assets>
+      <a-assets img="" src="Books &amp; Literature.png" id="Interest7"> </a-assets>
+      <a-assets img="" src="Business News.png" id="Interest8"> </a-assets>
+      <a-assets img="" src="Camera &amp; Photo Equipment.png" id="Interest9"> </a-assets>
+      <a-assets img="" src="Career Resources &amp; Planning.png" id="Interest10"> </a-assets>
+      <a-assets img="" src="Cats.png" id="Interest11"> </a-assets>
+      <a-assets img="" src="Celebrities &amp; Entertainment News.png" id="Interest12"> </a-assets>
+      <a-assets img="" src="Charity &amp; Philanthropy.png" id="Interest13"> </a-assets>
+      <a-assets img="" src="Classical Music.png" id="Interest14"> </a-assets>
+      <a-assets img="" src="Competitive Video Gaming.png" id="Interest15"> </a-assets>
+      <a-assets img="" src="Computer Hardware.png" id="Interest16"> </a-assets>
+      <a-assets img="" src="Computer Video Games.png" id="Interest17"> </a-assets>
+      <a-assets img="" src="Computers &amp; Electronics.png" id="Interest18"> </a-assets>
+      <a-assets img="" src="Construction &amp; Maintenance.png" id="Interest19"> </a-assets>
+      <a-assets img="" src="Current College Student.png" id="Interest20"> </a-assets>
+      <a-assets img="" src="Fast Food.png" id="Interest21"> </a-assets>
+      <a-assets img="" src="Homeowner.png" id="Interest22"> </a-assets>
+      <a-assets img="" src="Hospitality.png" id="Interest23"> </a-assets>
+      <a-assets img="" src="Male.png" id="Interest24"> </a-assets>
+      <a-assets img="" src="Mass Merchants &amp; Department Stores.png" id="Interest25"> </a-assets>
+      <a-assets img="" src="Moving &amp; Relocation.png" id="Interest26"> </a-assets>
+      <a-assets img="" src="Not A Parent.png" id="Interest27"> </a-assets>
+      <a-assets img="" src="Roleplaying Games.png" id="Interest28"> </a-assets>
+      <a-assets img="" src="Shooter Games.png" id="Interest29"> </a-assets>
+      <a-assets img="" src="Single.png" id="Interest30"> </a-assets>
+      <a-assets img="" src="Strategy Games.png" id="Interest31"> </a-assets>
+      <a-assets img="" src="Technology.png" id="Interest32"> </a-assets>
+      <a-assets img="" src="Comics N Animation.png" id="Interest33"> </a-assets>
+      <a-assets img="" src="Travel &amp; Transportation.png" id="Interest34"> </a-assets>
+      <a-assets img="" src="Upper Middle Class.png" id="Interest35"> </a-assets>
+      <a-assets img="" src="Urban Transit.png" id="Interest36"> </a-assets>
+      <a-assets img="" src="Very Large Employer.png" id="Interest37"> </a-assets>
+      <a-assets img="" src="Twitter 1.png" id="Interest38"> </a-assets>
+      <a-assets img="" src="Twitter 2.png" id="Interest39"> </a-assets>
+      <a-assets img="" src="Twitter 3.png" id="Interest40"> </a-assets>
+      <a-assets img="" src="Twitter 4.png" id="Interest41"> </a-assets>
+      <a-assets img="" src="Twitter 5.png" id="Interest42"> </a-assets>
+      <a-assets img="" src="Twitter 6.png" id="Interest43"> </a-assets>
+      <a-assets img="" src="Twitter 7.png" id="Interest44"> </a-assets>
+      <a-assets img="" src="Twitter 8.png" id="Interest45"> </a-assets>
+      <a-assets img="" src="Twitter 9.png" id="Interest46"> </a-assets>
+      <a-assets img="" src="Flowers.png" id="Interest47"> </a-assets>
+      <a-assets img="" src="Music And Audio.png" id="Interest48"> </a-assets>
+      <a-assets img="" src="Pet Food &amp; Pet Care Supplies.png" id="Interest49"> </a-assets>
+      <a-assets img="" src="Restaurants.png" id="Interest50"> </a-assets>
+      <a-assets img="" src="School Supplies N Classroom Equipment.png" id="Interest51"> </a-assets>
+      <a-assets img="" src="TV Sci-Fi and Fantasy Shows.png" id="Interest52"> </a-assets>
+      <a-assets img="" src="Vegetarian Cusine.png" id="Interest53"> </a-assets>
+      <a-assets img="" src="Visual Art and Design.png" id="Interest54"> </a-assets>
+      <a-assets img="" src="Combat Sports.png" id="Interest55"> </a-assets>
+      <a-assets img="" src="Greeting Card.png" id="Interest56"> </a-assets>
+      <a-assets img="" src="Local News.png" id="Interest57"> </a-assets>
+      <a-assets img="" src="G.png" id="Google"> </a-assets>
+      <a-assets img="" src="DoubleDoors.jpg" id="Doors"> </a-assets>
+      <a-assets img="" src="Ad1.jpg" id="A1"> </a-assets>
+      <a-assets img="" src="Ad2.jpg" id="A2"> </a-assets>
+      <a-assets img="" src="Ad3.jpg" id="A3"> </a-assets>
+      <a-assets img="" src="Ad4.jpg" id="A4"> </a-assets>
+      <a-assets img="" src="Ad5.jpg" id="A5"> </a-assets>
+      <a-assets img="" src="Ad6.jpg" id="A6"> </a-assets>
+      <a-assets img="" src="Ad7.jpg" id="A7"> </a-assets>
+      <a-assets img="" src="Ad8.jpg" id="A8"> </a-assets>
+      <a-assets img="" src="Ad9.jpg" id="A9"> </a-assets>
+      <a-assets img="" src="Ad10.jpg" id="A10"> </a-assets>
+      <a-assets-item src="book.obj" id="Book"> </a-assets-item>
+
+<!-- Building -->
+      <a-box
+        static-body="shape:box"
+        scale=".5 .5 .5"
+        position="1 1.75 -.49"
+        material="src: #Google">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale=".5 .5 .5"
+        position="-1 1.75 -.49"
+        material="src: #Google">
+      </a-box>
+      <a-box
+        scale="9 9 .6"
+        position="0 50 -.4"
+        material="src: #Google">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4.51 100 .5"
+        position="3 50 -.5"
+        color="#FFFFFF">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4.51 100 .5"
+        position="-3 50 -.5"
+        color="#FFFFFF">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4.51 97 .5"
+        position="0 51 -.5"
+        color="#FFFFFF">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 2 .25"
+        position="0 1.75 -.5"
+        material="src: #Doors"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 2000;
+          from: 0 -5 -.5;
+          to: 0 1.75 -.5">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="10 100 .5"
+        position="0 50 -10"
+        color="#FFFFFF">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale=".5 100 10"
+        position="-5 50 -5.25"
+        color="#FFFFFF">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale=".5 100 10"
+        position="5 50 -5.25"
+        color="#FFFFFF">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="10 .5 9.5"
+        position="0 100 -5"
+        color="#FFFFFF">
+      </a-box>
+
+<!-- Twitter Walls -->
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="0 -2 -3"
+        material="src: #Interest38"
+        animation="
+          property: position;
+          to: 0 2 -3;
+          dur:10000;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="-2 -2 -4"
+        material="src: #Interest39"
+        animation="
+          property: position;
+          to: -2 2 -4;
+          dur:12000;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="-2 -2 -5"
+        material="src: #Interest40"
+        animation="
+          property: position;
+          to: -2 2 -5;
+          dur:8000;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="2 -2 -6"
+        material="src: #Interest41"
+        animation="
+          property: position;
+          to: 2 2 -6;
+          dur:11000;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="3 -2 -7"
+        material="src: #Interest42"
+        animation="
+          property: position;
+          to: 3 2 -7;
+          dur:9000;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="1 -2 -8"
+        material="src: #Interest43"
+        animation="
+          property: position;
+          to: 1 2 -8;
+          dur:9500;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="-1 -2 -9"
+        material="src: #Interest44"
+        animation="
+          property: position;
+          to: -1 2 -9;
+          dur:8500;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="3 -2 -5"
+        material="src: #Interest45"
+        animation="
+          property: position;
+          to: 3 2 -5;
+          dur:11500;
+          dir: alternate;
+          loop: true">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="2 4 .2"
+        position="-3 -2 -8"
+        material="src: #Interest46"
+        animation="
+          property: position;
+          to: -3 2 -8;
+          dur:10500;
+          dir: alternate;
+          loop: true">
+      </a-box>
+
+<!-- Dynamic Spheres -->
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="0 50 -5" scale=".25 .25 .25" material="src: #Interest1">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position=".5 50 -5" scale=".25 .25 .25" material="src: #Interest2">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="1 50 -5" scale=".25 .25 .25" material="src: #Interest3">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="1.5 50 -5" scale=".25 .25 .25" material="src: #Interest4">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="2 50 -5" scale=".25 .25 .25" material="src: #Interest5">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="2.5 50 -5" scale=".25 .25 .25" material="src: #Interest6">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="3 50 -5" scale=".25 .25 .25" material="src: #Interest7">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="3.5 50 -5" scale=".25 .25 .25" material="src: #Interest8">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-.5 50 -5" scale=".25 .25 .25" material="src: #Interest9">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-1 50 -5" scale=".25 .25 .25" material="src: #Interest10">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-1.5 50 -5" scale=".25 .25 .25" material="src: #Interest11">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-2 50 -5" scale=".25 .25 .25" material="src: #Interest12">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-2.5 50 -5" scale=".25 .25 .25" material="src: #Interest13">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-3 50 -5" scale=".25 .25 .25" material="src: #Interest14">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-3.5 50 -5" scale=".25 .25 .25" material="src: #Interest15">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="0 50 -3" scale=".25 .25 .25" material="src: #Interest16">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position=".5 50 -3" scale=".25 .25 .25" material="src: #Interest17">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="1 50 -3" scale=".25 .25 .25" material="src: #Interest18">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="1.5 50 -3" scale=".25 .25 .25" material="src: #Interest19">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="2 50 -3" scale=".25 .25 .25" material="src: #Interest20">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="2.5 50 -3" scale=".25 .25 .25" material="src: #Interest21">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="3 50 -3" scale=".25 .25 .25" material="src: #Interest22">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="3.5 50 -3" scale=".25 .25 .25" material="src: #Interest23">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-.5 50 -3" scale=".25 .25 .25" material="src: #Interest24">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-1 50 -3" scale=".25 .25 .25" material="src: #Interest25">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-1.5 50 -3" scale=".25 .25 .25" material="src: #Interest26">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-2 50 -3" scale=".25 .25 .25" material="src: #Interest27">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-2.5 50 -3" scale=".25 .25 .25" material="src: #Interest28">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-3 50 -3" scale=".25 .25 .25" material="src: #Interest29">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-3.5 50 -5" scale=".25 .25 .25" material="src: #Interest30">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="0 50 -7" scale=".25 .25 .25" material="src: #Interest31">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position=".5 50 -7" scale=".25 .25 .25" material="src: #Interest32">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="1 50 -7" scale=".25 .25 .25" material="src: #Interest33">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="1.5 50 -7" scale=".25 .25 .25" material="src: #Interest34">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="2 50 -7" scale=".25 .25 .25" material="src: #Interest35">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="2.5 50 -7" scale=".25 .25 .25" material="src: #Interest36">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="3 50 -7" scale=".25 .25 .25" material="src: #Interest37">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="3.5 50 -7" scale=".25 .25 .25" material="src: #Interest47">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-.5 50 -7" scale=".25 .25 .25" material="src: #Interest48">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-1 50 -7" scale=".25 .25 .25" material="src: #Interest49">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-1.5 50 -7" scale=".25 .25 .25" material="src: #Interest50">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-2 50 -7" scale=".25 .25 .25" material="src: #Interest51">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-2.5 50 -7" scale=".25 .25 .25" material="src: #Interest52">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-3 50 -7" scale=".25 .25 .25" material="src: #Interest53">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-3.5 50 -7" scale=".25 .25 .25" material="src: #Interest54">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-3 50 -9" scale=".25 .25 .25" material="src: #Interest55">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="1.5 50 -9" scale=".25 .25 .25" material="src: #Interest56">
+    </a-sphere>
+    <a-sphere dynamic-body="shape:sphere; sphereRadius: .25;" position="-1.5 50 -9" scale=".25 .25 .25" material="src: #Interest57">
+    </a-sphere>
+
+<!-- Ads -->
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="0 2.99 23"
+        material="src: #A1"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: 0 -5 23;
+          to: 0 2.99 23">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="2 3.3 22.8"
+        material="src: #A2"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: 2 -5 22.8;
+          to: 2 3.3 22.8">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="-3 2.8 22.8"
+        material="src: #A3"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: -3 -5 22.8;
+          to: -3 2.8 22.8">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="-2 7 23"
+        material="src: #A4"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: -2 -5 23;
+          to: -2 7 23">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="3 6 22.6"
+        material="src: #A5"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: 3 -5 22.6;
+          to: 3 6 22.6">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="6 3 23"
+        material="src: #A6"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: 6 -5 23;
+          to: 6 3 23">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="-6 2.4 23"
+        material="src: #A7"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: -6 -5 23;
+          to: -6 2.4 23">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="0 6 22"
+        material="src: #A8"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: 0 -5 22;
+          to: 0 6 22">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="7 5 22.4"
+        material="src: #A9"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: 0 -5 22;
+          to: 7 5 22.4">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        scale="4 4 .2"
+        position="-7 5 22.4"
+        material="src: #A10"
+        animation__click="
+          property: position;
+          startEvents: click;
+          easing: easeInCubic;
+          dur: 1000;
+          from: -7 -5 22;
+          to: -7 5 22.4">
+      </a-box>
+
+<!-- Ground -->
+    <a-box
+      static-body="shape:box"
+      position="0 0 8"
+      rotation="0 0 0"
+      width="15"
+      height="1.99"
+      depth="40"
+      color="#ADADAD">
+    </a-box>
+
+<!-- Sky -->
+      <a-sky
+        color="#000000">
+      </a-sky>
+
+    </a-scene>
+</body></html>

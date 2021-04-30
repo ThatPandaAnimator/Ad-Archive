@@ -1,0 +1,471 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <title>A-Frame</title>
+        <<!-- main a-frame library -->
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+        <!-- physics library -->
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+        <!-- extras library -->
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+        <!-- for the nav mesh -->
+        <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+
+        <!-- A-Frame HREF component library -->
+        <script src="a-frame-href.js"></script>
+
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+    </head>
+    <body>
+    <a-scene physics="" cursor="rayOrigin: mouse">
+
+<!-- Camera -->
+      <a-entity id="rig" position="-15 1.5 0" rotation="0 -90 0" movement-controls="">
+      <a-entity id="camera" camera="" look-controls="rayOrigin: mouse"></a-entity>
+      <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
+    </a-entity>
+
+<!-- Assets --> 4 9 10 12 14 19 47 Google 56 22 23 57 24 25 6 26 48 27 49 51 21 34 53 37
+<a-assets img="" src="AdText.jpg" id="Interest"> </a-assets>
+<a-assets img="" src="18-24YearsOld.png" id="Interest1"> </a-assets>
+<a-assets img="" src="AnPGames.png" id="Interest2"> </a-assets>
+<a-assets img="" src="Adventure Games.png" id="Interest3"> </a-assets>
+<a-assets img="" src="Bachelor's Degree.png" id="Interest5"> </a-assets>
+<a-assets img="" src="Books &amp; Literature.png" id="Interest7"> </a-assets>
+<a-assets img="" src="Business News.png" id="Interest8"> </a-assets>
+<a-assets img="" src="Cats.png" id="Interest11"> </a-assets>
+<a-assets img="" src="Charity &amp; Philanthropy.png" id="Interest13"> </a-assets>
+<a-assets img="" src="Competitive Video Gaming.png" id="Interest15"> </a-assets>
+<a-assets img="" src="Computer Hardware.png" id="Interest16"> </a-assets>
+<a-assets img="" src="Computer Video Games.png" id="Interest17"> </a-assets>
+<a-assets img="" src="Computers &amp; Electronics.png" id="Interest18"> </a-assets>
+<a-assets img="" src="Current College Student.png" id="Interest20"> </a-assets>
+<a-assets img="" src="Roleplaying Games.png" id="Interest28"> </a-assets>
+<a-assets img="" src="Shooter Games.png" id="Interest29"> </a-assets>
+<a-assets img="" src="Single.png" id="Interest30"> </a-assets>
+<a-assets img="" src="Strategy Games.png" id="Interest31"> </a-assets>
+<a-assets img="" src="Technology.png" id="Interest32"> </a-assets>
+<a-assets img="" src="Comics N Animation.png" id="Interest33"> </a-assets>
+<a-assets img="" src="Upper Middle Class.png" id="Interest35"> </a-assets>
+<a-assets img="" src="Urban Transit.png" id="Interest36"> </a-assets>
+<a-assets img="" src="Twitter 1.png" id="Interest38"> </a-assets>
+<a-assets img="" src="Twitter 2.png" id="Interest39"> </a-assets>
+<a-assets img="" src="Twitter 3.png" id="Interest40"> </a-assets>
+<a-assets img="" src="Twitter 4.png" id="Interest41"> </a-assets>
+<a-assets img="" src="Twitter 5.png" id="Interest42"> </a-assets>
+<a-assets img="" src="Twitter 6.png" id="Interest43"> </a-assets>
+<a-assets img="" src="Twitter 7.png" id="Interest44"> </a-assets>
+<a-assets img="" src="Twitter 8.png" id="Interest45"> </a-assets>
+<a-assets img="" src="Twitter 9.png" id="Interest46"> </a-assets>
+<a-assets img="" src="Restaurants.png" id="Interest50"> </a-assets>
+<a-assets img="" src="TV Sci-Fi and Fantasy Shows.png" id="Interest52"> </a-assets>
+<a-assets img="" src="Visual Art and Design.png" id="Interest54"> </a-assets>
+<a-assets img="" src="Combat Sports.png" id="Interest55"> </a-assets>
+<a-assets img="" src="DoubleDoors.jpg" id="Doors"> </a-assets>
+<a-assets img="" src="Ad1.jpg" id="A1"> </a-assets>
+<a-assets img="" src="Ad2.jpg" id="A2"> </a-assets>
+<a-assets img="" src="Ad3.jpg" id="A3"> </a-assets>
+<a-assets img="" src="Ad4.jpg" id="A4"> </a-assets>
+<a-assets img="" src="Ad5.jpg" id="A5"> </a-assets>
+<a-assets img="" src="Ad6.jpg" id="A6"> </a-assets>
+<a-assets img="" src="Ad7.jpg" id="A7"> </a-assets>
+<a-assets img="" src="Ad8.jpg" id="A8"> </a-assets>
+<a-assets img="" src="Ad9.jpg" id="A9"> </a-assets>
+<a-assets img="" src="Ad10.jpg" id="A10"> </a-assets>
+      <a-assets-item src="Chapel.obj" id="Chapel"> </a-assets-item>
+      <a-assets-item src="Fence 1.obj" id="F1"> </a-assets-item>
+      <a-assets-item src="Fence 2.obj" id="F2"> </a-assets-item>
+      <a-assets-item src="Fence 3.obj" id="F3"> </a-assets-item>
+      <a-assets-item src="Fence 4.obj" id="F4"> </a-assets-item>
+      <a-assets-item src="Fence 5.obj" id="F5"> </a-assets-item>
+      <a-assets-item src="Fence 6.obj" id="F6"> </a-assets-item>
+      <a-assets-item src="Fence 7.obj" id="F7"> </a-assets-item>
+      <a-assets-item src="Fence 8.obj" id="F8"> </a-assets-item>
+      <a-assets-item src="Fence 9.obj" id="F9"> </a-assets-item>
+      <a-assets-item src="Fence 10.obj" id="F10"> </a-assets-item>
+      <a-assets-item src="Fence 11.obj" id="F11"> </a-assets-item>
+      <a-assets-item src="Headstone Pile.obj" id="Pile"> </a-assets-item>
+      <a-assets-item src="Graveyard.obj" id="Grave"> </a-assets-item>
+      <a-assets-item src="Trees.obj" id="Trees"> </a-assets-item>
+      <a-assets-item src="book.obj" id="Book"> </a-assets-item>
+
+<!-- RP Text -->
+        <a-box
+          position="-10 1.5 0"
+          rotation="0 -90 0"
+          width="6"
+          height="2"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText1; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText1; visible: false">
+            <a-text
+              id="rpText1"
+              value="The air becomes parched with a dry heat..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="0 1.5 0"
+          rotation="0 -90 0"
+          width="6"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText2; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText2; visible: false">
+            <a-text
+              id="rpText2"
+              value="Little remains, but a heavy air hangs..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-15 1.5 3"
+          rotation="0 180 0"
+          width="6"
+          height="2"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText3; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText3; visible: false">
+            <a-text
+              id="rpText3"
+              value="The barren land blurs with heat waves..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="-6 1.5 13"
+          rotation="0 -90 0"
+          width="10"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText4; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText4; visible: false">
+            <a-text
+              id="rpText4"
+              value="A graveyard fallen into disrepair..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="10.25 1 9.5"
+          rotation="0 -90 0"
+          width="1"
+          height="1"
+          depth=".25"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText5; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText5; visible: false">
+            <a-text
+              id="rpText5"
+              value="Edgar King"
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 0.25"
+              geometry="
+                primitive: plane;
+                width: 1.75"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="12 1.5 13"
+          rotation="0 -90 0"
+          width="10"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText6; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText6; visible: false">
+            <a-text
+              id="rpText6"
+              value="Skeleton trees remain standing for miles..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 0"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+        <a-box
+          position="26 1.5 30"
+          rotation="0 -90 0"
+          width="4"
+          height="8"
+          depth="1"
+          material="opacity: 0"
+          color="#ffffff"
+          event-set__enter="_event: mouseenter; _target: #rpText7; visible: true"
+          event-set__leave="_event: mouseleave; _target: #rpText7; visible: false">
+            <a-text
+              id="rpText7"
+              value="A jagged heart is etched here..."
+              align="center"
+              color="#FFF"
+              visible="false"
+              scale="1 1 1"
+              position="0 0 1"
+              rotation="0 -45 0"
+              geometry="
+                primitive: plane;
+                width: 4.5"
+              material="color: #333">
+            </a-text>
+        </a-box>
+
+
+<!-- Chapel -->
+      <a-entity
+        obj-model="obj: #Chapel"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="
+          side: double;
+          color: #828282">
+      </a-entity>
+      <a-box
+        static-body="shape:box"
+        position="4 -.25 0"
+        rotation="0 0 0"
+        width="3"
+        height="1"
+        depth="6"
+        material="src: #Interest39">
+      </a-box>
+      <a-box
+        static-body="shape:box"
+        position="3 -.25 0"
+        rotation="0 0 0"
+        width=".5"
+        height="3"
+        depth="1"
+        material="src: #A3">
+      </a-box>
+      <a-entity
+        id="book1"
+        obj-model="obj: #Book"
+        position="3 1.25 0"
+        scale=".025 .025 .025"
+        rotation="0 90 0"
+        material="src: #Interest17"
+        href="index.html"
+        event-set__enter="_event: mouseenter; _target: #popText1; visible: true"
+        event-set__leave="_event: mouseleave; _target: #popText1; visible: false">
+          <a-text
+            id="popText1"
+            value="The Blessed Archive"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="10 10 10"
+            rotation="0 0 0"
+            position="0 10 3"
+            geometry="primitive: plane; width: 1.75"
+            material="color: #333">
+          </a-text>
+        </a-entity>
+
+<!-- Graves -->
+      <a-entity
+        obj-model="obj: #Grave"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #A5">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #Pile"
+        position="0 0 .028"
+        scale=".01 .01 .01"
+        material="src: #A1">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #Trees"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest40">
+      </a-entity>
+      <a-entity
+        id="book2"
+        obj-model="obj: #Book"
+        position="10 0 9.45"
+        scale=".03 .03 .03"
+        rotation="0 -90 0"
+        material="src: #A7"
+        href="Page5.html"
+        event-set__enter="_event: mouseenter; _target: #popText4; visible: true"
+        event-set__leave="_event: mouseleave; _target: #popText4; visible: false">
+          <a-text
+            id="popText4"
+            value="Secrets in the Dark"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="10 10 10"
+            rotation="0 0 0"
+            position="0 10 3"
+            geometry="primitive: plane; width: 2"
+            material="color: #333">
+          </a-text>>
+      </a-entity>
+
+<!-- Fence -->
+      <a-entity
+        obj-model="obj: #F1"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F2"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F3"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F4"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F5"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F6"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F7"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F8"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F9"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F10"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+      <a-entity
+        obj-model="obj: #F11"
+        position="0 0 0"
+        scale=".01 .01 .01"
+        material="src: #Interest42">
+      </a-entity>
+
+<!-- Tree Book -->
+      <a-entity
+        id="book3"
+        obj-model="obj: #Book"
+        position="25 0 29.5"
+        scale=".03 .03 .03"
+        rotation="0 -90 0"
+        material="src: #A8"
+        href="Page2.html"
+        event-set__enter="_event: mouseenter; _target: #popText3; visible: true"
+        event-set__leave="_event: mouseleave; _target: #popText3; visible: false">
+          <a-text
+            id="popText3"
+            value="Innovative Contraptions"
+            align="center"
+            color="#FFF"
+            visible="false"
+            scale="10 10 10"
+            position="0 10 3"
+            geometry="primitive: plane; width: 3"
+            material="color: #333">
+          </a-text>>
+      </a-entity>
+
+<!-- Ground -->
+    <a-box
+      static-body="shape:box"
+      position="0 -.5 0"
+      rotation="0 0 0"
+      width="125"
+      height="1"
+      depth="150"
+      material="src: #Interest">
+    </a-box>
+
+<!-- Sky -->
+      <a-sky
+        material="src: #A1">
+      </a-sky>
+    </a-scene>
+
+
+</body></html>
